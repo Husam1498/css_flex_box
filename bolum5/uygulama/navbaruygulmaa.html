@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/ac72e5463b.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* .navbar {
+        background-color: #ffa62f;
+        display: flex;
+        margin: auto;
+      }
+      .logo {
+        margin-top: auto;
+        margin-bottom: auto;
+        color: #acd793;
+        font-size: 35px;
+        text-decoration: none;
+      }
+      .link {
+        display: flex;
+        margin-left: auto;
+        list-style-type: none;
+        padding: 10px;
+      }
+      .item {
+        text-decoration: none;
+        font-size: 20px;
+        margin-left: 10px;
+        color: #ff0000;
+      } */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between; /* logo ve linki bir sol ve sağa yanaştırır*/
+        background-color: #f1e5d1;
+        padding: 0 20px;
+      }
+      nav a {
+        align-self: center; /*elemanı ortaya aldık y ekseninide*/
+        text-decoration: none;
+        font-size: 35px;
+        color: #987070;
+      }
+      .link {
+        display: flex;
+        text-decoration: none;
+        list-style: none;
+      }
+      .item {
+        display: block;
+        padding: 20px;
+      }
+      .item:hover {
+        background-color: #ecb176;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+      }
+      .link li:last-child {
+        display: none;
+      }
+      @media (max-width: 600px) {
+        nav {
+          flex-direction: column;
+        }
+        .link {
+          flex-direction: column; /*linkler de alt alta gelir*/
+        }
+        .link a {
+          text-align: center;
+        }
+        .link li:last-child {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 10px;
+        }
+        .response ul li:not(:last-child) {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar response">
+      <a class="logo" href="#">Logo</a>
+      <ul class="link">
+        <li>
+          <a class="item" href="#">link1</a>
+        </li>
+        <li>
+          <a class="item" href="#">link2</a>
+        </li>
+        <li>
+          <a class="item" href="#">link3</a>
+        </li>
+        <li>
+          <a class="item" href="#">link4</a>
+        </li>
+        <li>
+          <a href="#"> <i class="fa-solid fa-bars"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

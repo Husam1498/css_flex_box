@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .images {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .images div {
+        flex-grow: 1;
+        margin: 3px;
+        overflow: hidden; /* hoverda taşmaması için */
+      }
+      img {
+        width: 100%; /*resimler arasında boşluk kalmaz dive tam sığar*/
+        transition: all 0.3s ease-in-out;
+        object-fit: cover;
+      }
+      img:hover {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>İmage Galeryyy</h1>
+    <div class="images">
+      <div><img src="https://picsum.photos/300/300?random=1" /></div>
+      <div><img src="https://picsum.photos/400/300?random=2" /></div>
+      <div><img src="https://picsum.photos/300/300?random=3" /></div>
+      <div><img src="https://picsum.photos/300/300?random=4" /></div>
+      <div><img src="https://picsum.photos/300/300?random=5" /></div>
+      <div><img src="https://picsum.photos/300/300?random=6" /></div>
+      <div><img src="https://picsum.photos/300/800?random=7" /></div>
+      <div><img src="https://picsum.photos/300/300?random=5" /></div>
+      <div><img src="https://picsum.photos/300/300?random=6" /></div>
+      <div><img src="https://picsum.photos/300/300?random=7" /></div>
+      <div><img src="https://picsum.photos/300/300?random=5" /></div>
+      <div><img src="https://picsum.photos/300/300?random=6" /></div>
+      <div><img src="https://picsum.photos/300/300?random=7" /></div>
+    </div>
+  </body>
+</html>

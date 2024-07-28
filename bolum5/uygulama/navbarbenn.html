@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/ac72e5463b.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        padding: 20px 10px;
+        background-color: #973131;
+      }
+      nav > a {
+        font-size: 36px;
+        color: #e0a75e;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+      nav > a:hover {
+        opacity: 0.6;
+      }
+      .link {
+        display: flex; /* linklerin yan yana olması için*/
+        list-style: none;
+        margin-top: 12px;
+      }
+      .link a {
+        text-decoration: none;
+        margin-left: 10px;
+        color: #f5e7b2;
+      }
+      .btn {
+        padding: 6px 8px;
+      }
+      .buton-primary {
+        background-color: #e0a75e;
+        color: #973131;
+        border: 2px solid #f5e7b2;
+        border-radius: 5px;
+        transition: all 0.3s;
+      }
+      .buton-primary:hover {
+        background-color: #973131;
+        color: #e0a75e;
+      }
+      .link2 li:last-child {
+        display: none;
+      }
+      @media (max-width: 600px) {
+        nav {
+          flex-direction: column;
+        }
+        .link {
+          align-self: center;
+        }
+        .link2 li:last-child {
+          display: block;
+          position: absolute;
+          top: 28px;
+          right: 16px;
+          font-size: 29px;
+        }
+        .link1 {
+          display: none;
+        }
+
+        .link2 li :not(:last-child) {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#">Logo</a>
+        <ul class="link link1">
+          <li>
+            <a class="btn buton-primary" href="#">Home</a>
+          </li>
+          <li>
+            <a class="btn buton-primary" href="#">Kullanıcı</a>
+          </li>
+          <li>
+            <a class="btn buton-primary" href="#">Listeler</a>
+          </li>
+          <li>
+            <a class="btn buton-primary" href="#">Hakında</a>
+          </li>
+        </ul>
+        <ul class="link link2">
+          <li>
+            <a class="btn buton-primary" href="#">Giriş</a>
+          </li>
+          <li>
+            <a class="btn buton-primary" href="#">Kayıt Ol</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

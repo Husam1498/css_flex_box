@@ -1,0 +1,253 @@
+:root {
+  --white: #fff;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+  --dark: #343a40;
+  --light: #f8f9fa;
+}
+/* text color*/
+.text-primary {
+  color: var(--primary);
+}
+.text-secondary {
+  color: var(--secondary);
+}
+.text-success {
+  color: var(--success);
+}
+.text-danger {
+  color: var(--danger);
+}
+.text-warning {
+  color: var(--warning);
+}
+.text-info {
+  color: var(--info);
+}
+.text-dark {
+  color: var(--dark);
+}
+.text-light {
+  color: var(--light);
+}
+/* bg colors*/
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.bg-success {
+  background-color: var(--success);
+}
+.bg-danger {
+  background-color: var(--danger);
+}
+.bg-warning {
+  background-color: var(--warning);
+}
+.bg-info {
+  background-color: var(--info);
+}
+.bg-white {
+  background-color: var(--white);
+}
+
+/*buton*/
+.btn {
+  cursor: pointer; /*üzerine geliğinde el işareti cıkar*/
+  display: inline-block;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.btn-primary {
+  color: var(--white);
+  background-color: var(--primary);
+}
+.btn-secondary {
+  color: var(--white);
+  background-color: var(--secondary);
+}
+.btn-success {
+  color: var(--white);
+  background-color: var(--success);
+}
+.btn-danger {
+  color: var(--white);
+  background-color: var(--danger);
+}
+.btn-warning {
+  color: var(--white);
+  background-color: var(--warning);
+}
+.btn-info {
+  color: var(--white);
+  background-color: var(--info);
+}
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+.btn-outline-primary {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--dark);
+}
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  color: var(--white);
+}
+.btn-outline-secondary {
+  background: transparent;
+  border: 2px solid var(--secondary);
+  color: var(--dark);
+}
+.btn-outline-secondary:hover {
+  background-color: var(--secondary);
+  border: 2px solid var(--secondary);
+  color: var(--white);
+}
+.btn-outline-success {
+  background: transparent;
+  border: 2px solid var(--success);
+  color: var(--dark);
+}
+.btn-outline-success:hover {
+  background-color: var(--success);
+  border: 2px solid var(--success);
+  color: var(--white);
+}
+.btn-outline-danger {
+  background: transparent;
+  border: 2px solid var(--danger);
+  color: var(--dark);
+}
+.btn-outline-danger:hover {
+  background-color: var(--danger);
+  border: 2px solid var(--danger);
+  color: var(--white);
+}
+.btn-outline-warning {
+  background: transparent;
+  border: 2px solid var(--warning);
+  color: var(--dark);
+}
+.btn-outline-warning:hover {
+  background-color: var(--warning);
+  border: 2px solid var(--warning);
+  color: var(--white);
+}
+.btn-outline-info {
+  background: transparent;
+  border: 2px solid var(--info);
+  color: var(--dark);
+}
+.btn-outline-info:hover {
+  background-color: var(--info);
+  border: 2px solid var(--info);
+  color: var(--white);
+}
+/* flex itemleri */
+.flex-items {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+.flex-items > div {
+  padding: 2rem;
+  flex-basis: 100%; /* Başlangıç genişliği*/
+}
+/* flex Column */
+.flex-column .row {
+  display: flex;
+  flex-direction: row; /* içerikler yan yana gelsin*/
+  flex-wrap: wrap; /* içerik ekrana sığmadığında alt alta gelsin*/
+  width: 100%;
+}
+.flex-column .column {
+  flex: 1; /*2 ye bölmesi için*/
+}
+.flex-column.article .column:nth-child(odd) {
+  /*altında kalan ilk eleman*/
+  flex: 2;
+}
+.flex-column.article .column:nth-child(even) {
+  /*ood altında  kalan eleman*/
+  flex: 3;
+}
+.flex-column .column .column-1,
+.flex-column .column .column-2 {
+  height: 100%;
+}
+.flex-column .column-2 {
+  display: flex;
+  flex-direction: column; /* içerikler alt alta gelsin*/
+  align-items: flex-start; /*içerikler sol taraftan başlasın*/
+  justify-content: center; /* lex-direction: column; olduğu için dikeyde ortalar*/
+  padding: 3rem;
+}
+.flex-column img {
+  width: 100%;
+  height: 100%;
+}
+.flex-column.flex-reverse .row {
+  flex-direction: row-reverse;
+}
+/* Flex-Grid */
+.flex-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.4rem;
+}
+.flex-grid .column {
+  padding: 0 0.4rem;
+  flex: 25%; /* 4 tane kolon varsa eşit şekilde paylaştır*/
+}
+/* section */
+.section-header {
+  display: flex;
+  flex-direction: column; /*Elemanlar alt alta gelsin*/
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem;
+}
+.section-header h2 {
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+.section-padding {
+  padding: 2rem 2rem 4rem;
+}
+/* galery */
+.galery img:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+/*Mobile*/
+@media (max-width: 768px) {
+  .flex-items {
+    flex-direction: column;
+  }
+  .flex-items > div {
+    padding: 1rem;
+  }
+  .flex-column .column {
+    flex: 100% !important;
+  }
+  .flex-grid .column {
+    flex: 50%; /* 4 tane kolon varsa eşit şekilde paylaştır*/
+  }
+}

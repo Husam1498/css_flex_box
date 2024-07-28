@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth; /*geçişler yavaşlıyacaktır*/
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 1.6; /* satır yüksekliği*/
+}
+ul {
+  list-style: none;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+p {
+  margin: 1rem 0;
+}
+img {
+  width: 100%;
+}
+.text-center {
+  text-align: center;
+}
+.ml-1 {
+  margin-right: 0.2rem;
+}
+.ml-2 {
+  margin-right: 0.4rem;
+}
+/*NAVBAR*/
+.navbar {
+  display: flex;
+  align-items: center; /*dikeyde otalamak*/
+  justify-content: space-between; /*h1-nav yatay da bir boşluk olsun*/
+  background-color: var(--dark);
+  opacity: 0.8; /*zeminin arkası gözükmesi için*/
+  color: #fff;
+  position: fixed; /* tüm sayfada her zaman durması için*/
+  top: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 3rem; /*sağdan ve soldan 30px*/
+}
+.navbar a {
+  color: #fff;
+  padding: 1rem 2rem; /* 10px 20 px*/
+  margin: 0 0.5rem;
+  transition: all 0.3s;
+}
+.navbar a:hover {
+  border-bottom: 2px solid var(--warning);
+}
+.navbar ul {
+  display: flex;
+}
+.navbar .brand {
+  font-weight: 400; /*font kalılığı*/
+}
+.navbar h1 {
+  font-size: 3rem;
+}
+.navbar span {
+  color: var(--warning);
+}
+
+/* header*/
+.main-header {
+  background-image: url("../images/bg-1.jpeg");
+  background-repeat: no-repeat; /* tekrrarlama olmasın*/
+  background-size: cover; /* sağdan ve soldan kırması gerekiyorsa kırpsın ve backgrona sıgdırsın*/
+
+  background-position: center;
+  height: 100vh; /* Kullanıcınn gördüğü tam ekran, yüksseklik verlimez eğere image görünmez*/
+  color: #fff;
+  position: relative;
+}
+.main-header.blog {
+  /*mainheader olan ayrıca class olarak bloga sahip*/
+  background-image: url("../images/bg-2.jpeg");
+  height: 50vh;
+}
+
+.main-header .content {
+  display: flex;
+  flex-direction: column; /* yatasyda hizalama*/
+  align-items: center;
+  justify-content: center; /* dikeyde ortaya getime*/
+  text-align: center;
+  height: 100%; /* yukardaki özeliklerin çalışabilmesi için yükseklik lazım */
+}
+/*Gölgelendirme*/
+.main-header::before {
+  content: "";
+  position: absolute; /* hangi nesneye göre ayarlıycaksa o nesneyse relative verilmesi gerekir*/
+  top: 0; /* başlasın*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.main-header * {
+  /* headerin altındaki her şeyi gölgelendirmenin üstüne çıkart*/
+  z-index: 1;
+}
+.main-header .content h1 {
+  font-size: 5.5rem;
+}
+.main-header .content p {
+  font-size: 2.3rem;
+  max-width: 60rem; /* p içerisindeki yazı maximum 600px ekadar genişlesin*/
+  margin: 2rem 0 3rem;
+}
+/* İcons */
+
+.icons {
+  padding: 3rem;
+}
+.icons h3 {
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+.icons i {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+/* About */
+.about {
+  color: #fff;
+}
+
+.about h2 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+.about p {
+  margin: 2rem 0;
+}
+
+/*Cards*/
+.card {
+  color: var(--white);
+  font-weight: 700;
+}
+.card-body {
+  padding: 2rem;
+  /* margin-top: -5px;/*body ile fotografı birleştirmek istediğimizde*/
+}
+
+/* teams */
+.teams img {
+  border-radius: 50%;
+}
+.teams img:hover {
+  opacity: 0.7;
+}
+/*Contact*/
+.contact-form {
+  width: 100%;
+  padding: 2rem 0;
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.contact-form .form-control {
+  margin-bottom: 1.5rem;
+}
+.contact-form input {
+  width: 100%;
+  padding: 0.5rem;
+  height: 4rem;
+  border: 1px solid var(--primary);
+}
+.contact-form .btn {
+  margin-top: 2rem;
+}
+.contact h2 {
+  font-size: 4rem;
+}
+/*Article*/
+.articles {
+  padding: 3rem 5rem;
+}
+.article {
+  margin-top: 1.5rem;
+  color: #fff;
+}
+/* Footer*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*dikeyde ortala*/
+
+  align-items: center; /*yatayda ortala*/
+  text-align: center;
+  height: 10rem;
+}
+.footer a {
+  color: var(--danger);
+}
+.footer a:hover {
+  opacity: 0.7;
+}
+.footer .social a {
+  margin-right: 1rem;
+}
+.footer .social {
+  margin-top: 2rem;
+}
+/* mobile */
+@media (max-width: 768px) {
+  html {
+    font-size: 9px;
+  }
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .navbar a {
+    padding: 1rem;
+    margin: 0 0.3rem;
+  }
+  .teams img {
+    width: 70%;
+  }
+}
